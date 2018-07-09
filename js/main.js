@@ -71,7 +71,7 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
 /**
  * Initialize leaflet map, called from HTML.
  */
-initMap = () => {
+/*initMap = () => {
   self.newMap = L.map('map', {
         center: [40.722216, -73.987501],
         zoom: 12,
@@ -87,8 +87,8 @@ initMap = () => {
   }).addTo(newMap);
 
   updateRestaurants();
-}
-/* window.initMap = () => {
+}*/
+ window.initMap = () => {
   let loc = {
     lat: 40.722216,
     lng: -73.987501
@@ -99,7 +99,7 @@ initMap = () => {
     scrollwheel: false
   });
   updateRestaurants();
-} */
+} 
 
 /**
  * Update page and map for current restaurants.
