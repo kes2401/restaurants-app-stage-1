@@ -88,6 +88,9 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
 
   updateRestaurants();
 }*/
+/**
+ * Initialize Google Map, called from HTML.
+ */
  window.initMap = () => {
   let loc = {
     lat: 40.722216,
@@ -135,7 +138,7 @@ resetRestaurants = (restaurants) => {
 
   // Remove all map markers
   if (self.markers) {
-    self.markers.forEach(marker => marker.remove());
+    self.markers.forEach(marker => marker.setMap(null));
   }
   self.markers = [];
   self.restaurants = restaurants;
@@ -198,7 +201,7 @@ createRestaurantHTML = (restaurant) => {
 //   });
 
 // } 
- addMarkersToMap = (restaurants = self.restaurants) => {
+addMarkersToMap = (restaurants = self.restaurants) => {
   restaurants.forEach(restaurant => {
     // Add marker to the map
     const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.map);
