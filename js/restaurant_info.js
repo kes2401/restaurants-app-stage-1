@@ -41,7 +41,7 @@ var newMap;
       console.error(error);
     } else {
       self.map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 16,
+        zoom: 17,
         center: restaurant.latlng,
         scrollwheel: false
       });
