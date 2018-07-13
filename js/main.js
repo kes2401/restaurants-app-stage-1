@@ -35,6 +35,7 @@ fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
   neighborhoods.forEach(neighborhood => {
     const option = document.createElement('option');
     option.innerHTML = neighborhood;
+    option.setAttribute('name', neighborhood);
     option.value = neighborhood;
     select.append(option);
   });
@@ -63,6 +64,7 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
   cuisines.forEach(cuisine => {
     const option = document.createElement('option');
     option.innerHTML = cuisine;
+    option.setAttribute('name', cuisine);
     option.value = cuisine;
     select.append(option);
   });
@@ -163,6 +165,7 @@ createRestaurantHTML = (restaurant) => {
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
+  image.setAttribute('alt', `Photo of ${restaurant.name}`);
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   li.append(image);
 
