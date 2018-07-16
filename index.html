@@ -15,6 +15,9 @@
       </nav>
     </header>
 
+    <!-- Skip Link -->
+    <a href="#neighborhoods-select" class="skip-link">Skip to main content</a>
+
     <main id="maincontent">
       <section id="map-container">
         <div id="map"></div>
@@ -22,7 +25,7 @@
       <section>
         <div class="filter-options">
           <h2>Filter Results</h2>
-          <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+          <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" tabindex="-1">
             <option value="all">All Neighborhoods</option>
           </select>
           <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">

@@ -21,7 +21,6 @@ if (navigator.serviceWorker) {
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
-  // initMap(); // added 
   fetchNeighborhoods();
   fetchCuisines();
 });
@@ -96,7 +95,9 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
     center: loc,
     scrollwheel: false
   });
+
   updateRestaurants();
+
 } 
 
 /**
@@ -162,7 +163,7 @@ createRestaurantHTML = (restaurant) => {
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   li.append(image);
 
-  const name = document.createElement('h1');
+  const name = document.createElement('h2');
   name.innerHTML = restaurant.name;
   li.append(name);
 

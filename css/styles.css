@@ -287,12 +287,13 @@ nav h1 a {
   padding: 30px 40px 80px;
 }
 
-#reviews-container h2 {
+#reviews-container h3 {
   color: #f58500;
   font-size: 24pt;
   font-weight: 300;
   letter-spacing: -1px;
   padding-bottom: 1pt;
+  text-align: center;
 }
 
 #reviews-list {
@@ -302,7 +303,7 @@ nav h1 a {
 
 #reviews-list li {
   background-color: #fff;
-    border: 2px solid #f3f3f3;
+  border: 2px solid #f3f3f3;
   display: block;
   list-style-type: none;
   margin: 0 0 30px;
@@ -335,12 +336,14 @@ nav h1 a {
   }
 
   div.filter-options h2 {
+    display: block;
     padding: 10px 0;
     text-align: center;
   }
 
   div.filter-options {
     height: 146px;
+    padding-left: 0;
   }
 
   #neighborhoods-select, #cuisines-select {
@@ -438,7 +441,6 @@ nav h1 a {
     padding: 20px;
     margin: 20px auto;
   }
-
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
@@ -453,17 +455,22 @@ nav h1 a {
   }
 
   div.filter-options h2 {
+    display: block;
     padding: 10px 0;
     text-align: center;
   }
 
   div.filter-options {
+    display: block;
     height: 100px;
+    padding-left: 0;
   }
 
   #neighborhoods-select, #cuisines-select {
+    display: inline-block;
     margin: 10px 10px;
   }
+
 
   #neighborhoods-select {
     margin-left: calc((100% - 440px) / 2);
@@ -553,4 +560,20 @@ nav h1 a {
     padding: 20px;
     margin: 20px auto;
   }
+}
+
+/* ---------- Skip Link ---------- */
+
+a.skip-link {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  background-color: #ccc;
+  color: #222;
+  padding: 6px;
+  z-index: 500;
+}
+
+a.skip-link:focus {
+  top: 0;
 }
