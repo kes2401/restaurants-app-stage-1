@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
@@ -18,28 +18,32 @@
         <h1><a href="/">Restaurant Reviews</a></h1>
       </nav>
       <!-- Beginning breadcrumb -->
-      <ul id="breadcrumb" >
+      <ul id="breadcrumb" aria-label="Breadcrumb" role="Navigation">
         <li><a href="/">Home</a></li>
-      </ul>
+      </ul>  
+
       <!-- End breadcrumb -->
       <!-- End nav -->
+
+    <!-- Skip Link -->
+    <a href="#restaurant-name" class="skip-link">Skip to main content</a>
+
     </header>
     <!-- End header -->
+
+
 
     <!-- Beginning main -->
     <main id="maincontent">
 
-      <!-- Skip Link -->
-      <a href="#restaurant-name" class="skip-link">Skip to main content</a>
-
       <!-- Beginning map -->
       <section id="map-container">
-        <div id="map"></div>
+        <div id="map" role="application"></div>
       </section>
       <!-- End map -->
       <!-- Beginning restaurant -->
       <section id="restaurant-container">
-        <h2 id="restaurant-name"></h2>
+        <h2 id="restaurant-name" tabindex="-1"></h2>
         <img id="restaurant-img">
         <p id="restaurant-cuisine"></p>
         <p id="restaurant-address"></p>

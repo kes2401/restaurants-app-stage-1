@@ -571,7 +571,7 @@ a.skip-link {
   background-color: #ccc;
   color: #222;
   padding: 6px;
-  z-index: 500;
+  
 }
 
 a.skip-link:focus {
